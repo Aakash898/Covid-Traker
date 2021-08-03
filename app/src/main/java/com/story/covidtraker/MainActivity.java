@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
                         todayRecovered.setText(NumberFormat.getInstance().format(Integer.parseInt(list.get(i).getTodayRecovered())));
                         totalTest.setText(NumberFormat.getInstance().format(Integer.parseInt(list.get(i).getTests())));
 
-                        pieChart.addPieSlice(new PieModel("Confirm",confirm,getResources().getColor(R.color.yellow)));
-                        pieChart.addPieSlice(new PieModel("Active",active,getResources().getColor(R.color.blue_pie)));
-                        pieChart.addPieSlice(new PieModel("Recovered",recovered,getResources().getColor(R.color.green_pie)));
-                        pieChart.addPieSlice(new PieModel("Death",death,getResources().getColor(R.color.red_pie)));
+//                        pieChart.addPieSlice(new PieModel("Confirm",confirm,getResources().getColor(R.color.yellow)));
+//                        pieChart.addPieSlice(new PieModel("Active",active,getResources().getColor(R.color.blue_pie)));
+//                        pieChart.addPieSlice(new PieModel("Recovered",recovered,getResources().getColor(R.color.green_pie)));
+//                        pieChart.addPieSlice(new PieModel("Death",death,getResources().getColor(R.color.red_pie)));
 
                         pieChart.startAnimation();
                     }
@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<CountryData>> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Error: "+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
